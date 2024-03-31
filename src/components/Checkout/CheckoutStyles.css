@@ -1,0 +1,75 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.col-25 {
+    flex: 100%; /* Take up full width on small screens */
+}
+
+.col-50 {
+    flex: 50%;
+}
+
+.col-75 {
+    display: none; /* Hide this column on small screens */
+}
+
+.col-25,
+.col-50 {
+    padding: 0;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 10px; /* Adjust padding to make the form smaller */
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: calc(100% - 24px); /* Adjust input width to accommodate padding */
+    margin-bottom: 10px; /* Reduce margin bottom */
+    padding: 8px; /* Adjust padding */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 5px; /* Reduce margin bottom */
+}
+
+.icon-container {
+    margin-bottom: 10px; /* Reduce margin bottom */
+    padding: 5px 0; /* Adjust padding */
+    font-size: 20px; /* Adjust font size */
+}
+
+.btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px; /* Adjust font size */
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+@media (min-width: 800px) { /* Apply styles for screens wider than 800px */
+    .col-75 {
+        display: block; /* Display this column on wider screens */
+        flex: 75%;
+    }
+}
